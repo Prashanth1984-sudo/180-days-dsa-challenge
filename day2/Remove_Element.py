@@ -4,14 +4,16 @@
 # # Output: 2, nums = [2,2,_,_]
 # # Explanation: Your function should return k = 2, with the first two elements of nums being 2.
 # # It does not matter what you leave beyond the returned k (hence they are underscores).
-# class Solution:
-#     def removeElement(self, nums: List[int], val: int) -> int:
-#         k = 0  
-#         for i in range(len(nums)):
-#             if nums[i] != val:
-#                 nums[k] = nums[i]
-#                 k += 1
-#         return k
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0  
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
+
+
 nums=list(map(int,input().split()))
 val=int(input())
 k=0
